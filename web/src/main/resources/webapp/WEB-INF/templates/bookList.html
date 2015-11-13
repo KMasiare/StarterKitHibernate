@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Lista książek by_kotLeon</title>
+</head>
+<body>
+<H1>kotLeon!</H1>
+	<table>
+	<form:form method="GET" action="@{|/kotLeon|}">
+	<div th:each="book : ${books}">
+    		<tr>
+    			<td>
+        			<p th:text="${book.id}">id</p>
+        		</td>
+        		<td>
+        			<p th:text="${book.title}">title</p>
+        		</td>
+        		<td>
+        			<p th:text="${book.authors}">author</p>
+        		</td>
+        		<td>
+        			<a th:href="@{|/BookController/oJaNieMoge/${book.id}|}"><span>usun_Ksiazke</span></a>
+        		</td>
+        	</tr>
+    	</div>
+    	</form:form>
+    	
+    </table>
+</body>
+</html>
