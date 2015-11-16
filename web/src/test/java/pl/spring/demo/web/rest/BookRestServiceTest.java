@@ -25,6 +25,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
@@ -87,7 +88,7 @@ public class BookRestServiceTest {
     }
     
     @Test
-    public void testShouldDeleteBook() {
+    public void testShouldDeleteBook() throws Exception {
     	// given
     	BookTo bookToDelete = new BookTo(13L, "Piatek trzynastego", "kotLeon");
     	Mockito.when(bookService.removeBook(bookToDelete)).thenReturn(bookToDelete);
