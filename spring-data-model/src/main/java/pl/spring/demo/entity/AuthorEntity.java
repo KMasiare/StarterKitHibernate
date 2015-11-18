@@ -31,4 +31,12 @@ public class AuthorEntity {
 	public AuthorEntity() {
 		
 	}
+	
+	public AuthorEntity(PersonalData ps) {
+		this.personalData = ps;
+	}
+	
+	public PersonalData getPersonalData() {
+		return personalData;
+	}
 }

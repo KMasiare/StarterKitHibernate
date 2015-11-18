@@ -16,5 +16,16 @@ public class PersonalData {
 	public PersonalData() {
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
+	public String getSurname() {
+		return surname;
+	}
+	
+	public String returnSurnameAndName() {
+		return surname + " " + name;
+	}
 	
 }
