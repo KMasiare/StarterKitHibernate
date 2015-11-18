@@ -93,9 +93,6 @@ public class BookRestServiceTest {
     	BookTo bookToDelete = new BookTo(13L, "Piatek trzynastego", "kotLeon");
     	Mockito.when(bookService.removeBook(bookToDelete)).thenReturn(bookToDelete);
     	// when
-/*    	ResultActions response = this.mockMvc.perform(delete(bookToDelete)
-                .accept(MediaType.APPLICATION_JSON)
-                .contentType(MediaType.APPLICATION_JSON));*/
     	ResultActions response = this.mockMvc.perform(delete("/bookDelete"));
     	// then
     }
